@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import dagshub
-dagshub.init(repo_owner='fahimai001', repo_name='mlflow-dagshub', mlflow=True)
+dagshub.init(repo_owner='fahimai001', repo_name='dagshub-demo', mlflow=True)
 
-mlflow.set_tracking_uri("https://dagshub.com/fahimai001/mlflow-dagshub.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/fahimai001/dagshub-demo.mlflow")
 
 # Load the iris dataset
 iris = load_iris()
@@ -59,7 +59,7 @@ with mlflow.start_run():
 
     mlflow.sklearn.log_model(dt, "decision tree")
 
-    mlflow.set_tag('author','nitish')
+    mlflow.set_tag('author','waleed')
     mlflow.set_tag('model','decision tree')
 
     print('accuracy', accuracy)
